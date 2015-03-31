@@ -1,0 +1,24 @@
+PODS:
+  - IQKeyboardManager (3.2.1.2)
+  - MKNetworkKit (0.87):
+    - Reachability (~> 3.1.0)
+  - Reachability (3.1.1)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.7.2)
+  - SVProgressHUD (1.1.2)
+
+DEPENDENCIES:
+  - IQKeyboardManager (~> 3.2.0)
+  - MKNetworkKit (~> 0.87)
+  - SDWebImage (~> 3.7.1)
+  - SVProgressHUD (~> 1.0)
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 4adcd7cc9c17440a7cb74755f6f6c8389919c6bf
+  MKNetworkKit: 83e6296a8d42e98a71880424a889773654846d74
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
+
+COCOAPODS: 0.34.2
