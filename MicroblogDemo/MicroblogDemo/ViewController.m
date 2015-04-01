@@ -26,6 +26,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 @property(nonatomic,strong)NSArray*  tableData;
 
+@property(nonatomic,strong)NSArray*  urlArray;
+
 
 @end
 
@@ -55,6 +57,14 @@ static NSString *CellIdentifier = @"CellIdentifier";
                        @"四川峨眉山景区降近7年来最大雪",
                        @"萌物：伊犁鼠兔是世界珍稀动物之一。日前，这一天然萌物再次在中国新疆被发现。伊犁鼠兔，生活在天山山脉高寒山区，是中国新疆特有的一个物种。3月23日，实名认证微博“美国国家地理”发布一组有关伊犁鼠兔的照片，因其形象呆萌可爱，长相酷似泰迪，立即引起了众多网友的关注。23日中午，记者电话联系到新疆发现鼠兔第一人，新疆环境保护科学研究院副研究员、新疆生态学会副秘书长李维东，他义务跟踪保护鼠兔三十多年。李维东介绍，美国国家地理微博晒出的这组鼠兔照片，是他去年7月在天山精河县木孜克冰达坂布设红外线触发相机时摄到的。照片中的鼠兔，也是他时隔24年后再次拍摄到的珍贵镜头。"
                        ];
+    
+    _urlArray= @[@"http://ww2.sinaimg.cn/thumbnail/904c2a35jw1emu3ec7kf8j20c10epjsn.jpg",
+                        @"http://ww2.sinaimg.cn/thumbnail/98719e4agw1e5j49zmf21j20c80c8mxi.jpg",
+                        @"http://ww2.sinaimg.cn/thumbnail/67307b53jw1epqq3bmwr6j20c80axmy5.jpg",
+                        @"http://ww2.sinaimg.cn/thumbnail/9ecab84ejw1emgd5nd6eaj20c80c8q4a.jpg",
+                        @"http://ww2.sinaimg.cn/thumbnail/642beb18gw1ep3629gfm0g206o050b2a.gif",
+                        @"http://ww4.sinaimg.cn/thumbnail/9e9cb0c9jw1ep7nlyu8waj20c80kptae.jpg"];
+
 }
 
 
@@ -82,8 +92,10 @@ static NSString *CellIdentifier = @"CellIdentifier";
     cell.bodyLabel.text = [self.tableData objectAtIndex:indexPath.row];
     cell.headImageView.image=[UIImage imageNamed:@"headImg_4"];
     
-    //[cell setImageswithURLs:@[@"headImg_1",@"headImg_2",@"headImg_3",@"headImg_4",@"headImg_5",@"headImg_6",@"headImg_7",@"headImg_8",@"headImg_9"]];
-    [cell setImageswithURLs:@[@"headImg_1",@"headImg_2",@"headImg_3"]];
+    
+    [cell setImageswithURLs:_urlArray];
+   // [cell setImageswithURLs:@[@"headImg_1",@"headImg_2",@"headImg_3",@"headImg_4",@"headImg_5",@"headImg_6",@"headImg_7",@"headImg_8",@"headImg_9"]];
+    //[cell setImageswithURLs:@[@"headImg_1",@"headImg_2",@"headImg_3"]];
     //[cell setImageswithURLs:@[@"headImg_1"]];
 
 
@@ -135,8 +147,11 @@ static NSString *CellIdentifier = @"CellIdentifier";
      *  添加多图
      */
     
+    
+    [cell setImageswithURLs:_urlArray];
+
     //[cell setImageswithURLs:@[@"headImg_1",@"headImg_2",@"headImg_3",@"headImg_4",@"headImg_5",@"headImg_6",@"headImg_7",@"headImg_8",@"headImg_9"]];
-    [cell setImageswithURLs:@[@"headImg_1",@"headImg_2",@"headImg_3"]];
+   // [cell setImageswithURLs:@[@"headImg_1",@"headImg_2",@"headImg_3"]];
     //[cell setImageswithURLs:@[@"headImg_1"]];
     
     

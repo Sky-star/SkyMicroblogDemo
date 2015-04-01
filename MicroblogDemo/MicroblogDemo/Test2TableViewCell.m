@@ -8,6 +8,8 @@
 
 #import "Test2TableViewCell.h"
 #import "UIView+AutoLayout.h"
+#import "SDPhotoBrowser.h"
+#import <UIImageView+WebCache.h>
 
 
 
@@ -35,7 +37,7 @@ alpha:1.0]
 #define MaxImageCount                       9
 #define MinimumImageCount                   0
 
-@interface Test2TableViewCell ()
+@interface Test2TableViewCell ()<SDPhotoBrowserDelegate>
 
 
 @property (nonatomic,strong ) NSArray        * urlArray;
@@ -78,12 +80,12 @@ alpha:1.0]
        
         [self.headImageView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:12];
         [self.headImageView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:12];
+        [self.headImageView autoSetDimensionsToSize:HeadImageSize];
 
-        [UIImageView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
-            [self.headImageView autoSetDimensionsToSize:HeadImageSize];
-        }];
+        //[UIImageView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
+        //}];
         //距离底部的高度也需要设置
-        [self.headImageView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:10 relation:NSLayoutRelationGreaterThanOrEqual];
+        //[self.headImageView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:10 relation:NSLayoutRelationGreaterThanOrEqual];
 
      
     
@@ -141,21 +143,53 @@ alpha:1.0]
     _urlArray=[[NSArray alloc]initWithArray:urls];
     [self.imageViewArray removeAllObjects];
     
-    for (NSString* url in _urlArray)
-    {
+    [_urlArray enumerateObjectsUsingBlock:^(NSString* url, NSUInteger idx, BOOL *stop) {
         UIImageView* imgV=[[UIImageView alloc]initForAutoLayout];
         
         imgV.backgroundColor=[UIColor orangeColor];
         imgV.contentMode=UIViewContentModeScaleToFill;
-
-        //test data
-        [imgV setImage:[UIImage imageNamed:url]];
+        imgV.userInteractionEnabled=YES;
+        [imgV addGestureRecognizer:[self addTapGestureRecognizer]];
         
-      //  [self.contentView addSubview:imgV];
+        [imgV sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"headImg_9"] options:SDWebImageProgressiveDownload];
         
         [self.imageViewArray addObject:imgV];
-    }
+    }];
     
+}
+
+-(UITapGestureRecognizer*)addTapGestureRecognizer
+{
+    UITapGestureRecognizer* tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imgViewTapped:)];
+    
+    return tapGesture;
+}
+
+-(void)imgViewTapped:(UITapGestureRecognizer*) tapGestureRecognizer
+{
+    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
+    browser.sourceImagesContainerView = self.contentView; // 原图的父控件
+    browser.imageCount = self.imageViewArray.count; // 图片总数
+    browser.currentImageIndex = (int)tapGestureRecognizer.view.tag;
+    browser.delegate = self;
+    [browser show];
+
+}
+
+#pragma mark - photobrowser代理方法
+
+// 返回临时占位图片（即原来的小图）
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index
+{
+    return ((UIImageView*)_imageViewArray[index]).image;
+}
+
+
+// 返回高质量图片的url
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
+{
+    NSString *urlStr =[self.urlArray[index] stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+    return [NSURL URLWithString:urlStr];
 }
 
 #pragma mark - Layout Method

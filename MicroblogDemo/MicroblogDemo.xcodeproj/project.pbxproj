@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330746F91ACB8ABE006E2D9F /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 330746F31ACB8ABE006E2D9F /* SDBrowserImageView.m */; };
+		330746FA1ACB8ABE006E2D9F /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 330746F51ACB8ABE006E2D9F /* SDPhotoBrowser.m */; };
+		330746FB1ACB8ABE006E2D9F /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 330746F81ACB8ABE006E2D9F /* SDWaitingView.m */; };
 		3355F4201AC3ADC8007B7AF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F41F1AC3ADC8007B7AF3 /* main.m */; };
 		3355F4231AC3ADC8007B7AF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4221AC3ADC8007B7AF3 /* AppDelegate.m */; };
 		3355F4261AC3ADC8007B7AF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4251AC3ADC8007B7AF3 /* ViewController.m */; };
@@ -31,6 +34,13 @@
 
 /* Begin PBXFileReference section */
 		10C787B3EE93CB7035217C69 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		330746F21ACB8ABE006E2D9F /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		330746F31ACB8ABE006E2D9F /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		330746F41ACB8ABE006E2D9F /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		330746F51ACB8ABE006E2D9F /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		330746F61ACB8ABE006E2D9F /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		330746F71ACB8ABE006E2D9F /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		330746F81ACB8ABE006E2D9F /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
 		3355F41A1AC3ADC8007B7AF3 /* MicroblogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroblogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3355F41E1AC3ADC8007B7AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3355F41F1AC3ADC8007B7AF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,6 +81,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		330746F01ACB8A99006E2D9F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				330746F11ACB8ABE006E2D9F /* SDPhotoBrowser */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		330746F11ACB8ABE006E2D9F /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				330746F21ACB8ABE006E2D9F /* SDBrowserImageView.h */,
+				330746F31ACB8ABE006E2D9F /* SDBrowserImageView.m */,
+				330746F41ACB8ABE006E2D9F /* SDPhotoBrowser.h */,
+				330746F51ACB8ABE006E2D9F /* SDPhotoBrowser.m */,
+				330746F61ACB8ABE006E2D9F /* SDPhotoBrowserConfig.h */,
+				330746F71ACB8ABE006E2D9F /* SDWaitingView.h */,
+				330746F81ACB8ABE006E2D9F /* SDWaitingView.m */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		3355F4111AC3ADC8007B7AF3 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +126,7 @@
 		3355F41C1AC3ADC8007B7AF3 /* MicroblogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				330746F01ACB8A99006E2D9F /* Library */,
 				3355F4861AC3FD2C007B7AF3 /* Source */,
 				3355F4211AC3ADC8007B7AF3 /* AppDelegate.h */,
 				3355F4221AC3ADC8007B7AF3 /* AppDelegate.m */,
@@ -296,11 +329,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330746F91ACB8ABE006E2D9F /* SDBrowserImageView.m in Sources */,
 				3355F4891AC3FD2C007B7AF3 /* UIView+AutoLayout.m in Sources */,
+				330746FA1ACB8ABE006E2D9F /* SDPhotoBrowser.m in Sources */,
 				3355F4851AC3FCA4007B7AF3 /* Test2TableViewCell.m in Sources */,
 				3355F4261AC3ADC8007B7AF3 /* ViewController.m in Sources */,
 				3355F4231AC3ADC8007B7AF3 /* AppDelegate.m in Sources */,
 				3355F4201AC3ADC8007B7AF3 /* main.m in Sources */,
+				330746FB1ACB8ABE006E2D9F /* SDWaitingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
