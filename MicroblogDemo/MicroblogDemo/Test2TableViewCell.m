@@ -68,7 +68,8 @@ alpha:1.0]
         [self.contentView addSubview:self.bodyLabel];
         [self.contentView addSubview:self.userNameLabel];
         [self.contentView addSubview:self.timeLabel];
-    }
+        
+     }
     return self;
 }
 
@@ -149,6 +150,7 @@ alpha:1.0]
         imgV.backgroundColor=[UIColor orangeColor];
         imgV.contentMode=UIViewContentModeScaleToFill;
         imgV.userInteractionEnabled=YES;
+        imgV.tag=idx;
         [imgV addGestureRecognizer:[self addTapGestureRecognizer]];
         
         [imgV sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"headImg_9"] options:SDWebImageProgressiveDownload];
@@ -171,6 +173,7 @@ alpha:1.0]
     browser.sourceImagesContainerView = self.contentView; // 原图的父控件
     browser.imageCount = self.imageViewArray.count; // 图片总数
     browser.currentImageIndex = (int)tapGestureRecognizer.view.tag;
+    browser.imageArray=self.imageViewArray;
     browser.delegate = self;
     [browser show];
 
@@ -315,6 +318,7 @@ alpha:1.0]
         _headImageView.backgroundColor=[UIColor orangeColor];
         _headImageView.contentMode=UIViewContentModeScaleToFill;
         _headImageView.clipsToBounds=YES;
+        _headImageView.tag=1000;
         _headImageView.layer.cornerRadius=5.f;
     }
     return _headImageView;

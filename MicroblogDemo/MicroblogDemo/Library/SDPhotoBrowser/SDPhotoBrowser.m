@@ -144,7 +144,7 @@
     SDBrowserImageView *imageView = _scrollView.subviews[index];
     if (imageView.hasLoadedImage) return;
     if ([self highQualityImageURLForIndex:index]) {
-        [imageView setImageWithURL:[self highQualityImageURLForIndex:index] placeholderImage:[self placeholderImageForIndex:index]];
+        [imageView sd_setImageWithURL:[self highQualityImageURLForIndex:index]  placeholderImage:[self placeholderImageForIndex:index]];
     } else {
         imageView.image = [self placeholderImageForIndex:index];
     }
@@ -155,10 +155,12 @@
 {
     _scrollView.hidden = YES;
     
+    
     SDBrowserImageView *currentImageView = (SDBrowserImageView *)recognizer.view;
     NSInteger currentIndex = currentImageView.tag;
     
-    UIView *sourceView = self.sourceImagesContainerView.subviews[currentIndex];
+    //UIView *sourceView = self.sourceImagesContainerView.subviews[currentIndex];
+    UIView* sourceView=[self.imageArray objectAtIndex:currentIndex];
     CGRect targetTemp = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
     
     UIImageView *tempView = [[UIImageView alloc] init];
@@ -227,18 +229,23 @@
 {
     
     
-    UIView *sourceView = self.sourceImagesContainerView.subviews[self.currentImageIndex];
+   // UIView *sourceView = self.sourceImagesContainerView.subviews[self.currentImageIndex];
+    UIView * sourceView=[self.imageArray objectAtIndex:self.currentImageIndex];
+    NSLog(@"recognizer:%@",NSStringFromCGRect(sourceView.frame));
+
     CGRect rect = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
     
     UIImageView *tempView = [[UIImageView alloc] init];
     tempView.image = [self placeholderImageForIndex:self.currentImageIndex];
-    
     [self addSubview:tempView];
     
     CGRect targetTemp = [_scrollView.subviews[self.currentImageIndex] bounds];
+   // CGRect targetTemp = [[_scrollView viewWithTag:self.currentImageIndex] bounds];
+
     
     tempView.frame = rect;
     tempView.contentMode = [_scrollView.subviews[self.currentImageIndex] contentMode];
+    //tempView.contentMode=[[_scrollView viewWithTag:self.currentImageIndex] contentMode];
     _scrollView.hidden = YES;
     
     
@@ -277,7 +284,7 @@
     // 有过缩放的图片在拖动100后清除缩放
     CGFloat margin = 100.0;
     CGFloat x = scrollView.contentOffset.x;
-    if ((x - index * self.bounds.size.width) > margin || (x - index * self.bounds.size.width) < - margin) {
+    if ((x - index * self.bounds.size.width) > margin || (x - (index) * self.bounds.size.width) < - margin) {
         SDBrowserImageView *imageView = _scrollView.subviews[index];
         if (imageView.isScaled) {
             [UIView animateWithDuration:0.5 animations:^{
