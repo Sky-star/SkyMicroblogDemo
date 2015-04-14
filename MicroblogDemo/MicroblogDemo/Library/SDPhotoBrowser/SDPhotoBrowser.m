@@ -231,7 +231,7 @@
     
    // UIView *sourceView = self.sourceImagesContainerView.subviews[self.currentImageIndex];
     UIView * sourceView=[self.imageArray objectAtIndex:self.currentImageIndex];
-    NSLog(@"recognizer:%@",NSStringFromCGRect(sourceView.frame));
+   // NSLog(@"recognizer:%@",NSStringFromCGRect(sourceView.frame));
 
     CGRect rect = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
     
@@ -240,7 +240,6 @@
     [self addSubview:tempView];
     
     CGRect targetTemp = [_scrollView.subviews[self.currentImageIndex] bounds];
-   // CGRect targetTemp = [[_scrollView viewWithTag:self.currentImageIndex] bounds];
 
     
     tempView.frame = rect;
