@@ -158,9 +158,27 @@
     
     SDBrowserImageView *currentImageView = (SDBrowserImageView *)recognizer.view;
     NSInteger currentIndex = currentImageView.tag;
+    //计算所滑动的frame的位置
+    CGRect tempRect=self.tapedImageView.frame;
+    //获取第一张图片的各个值 然后根据结束图片的tag值计算应该回到的frame
+    CGFloat width=self.tapedImageView.frame.size.width;
+    CGFloat height=self.tapedImageView.frame.size.height;
+    CGFloat margin=10.f;
     
-    //UIView *sourceView = self.sourceImagesContainerView.subviews[currentIndex];
-    UIView* sourceView=[self.imageArray objectAtIndex:currentIndex];
+    //第一张图的x
+    CGFloat x=self.tapedImageView.frame.origin.x-(self.tapedImageView.tag%3*(width+margin));
+    CGFloat y=self.tapedImageView.frame.origin.y-((self.tapedImageView.tag/3)*(height+margin));
+    
+    //计算出当前结束图片的frame
+    tempRect.origin.x=x+(width+margin)*(currentIndex%3);
+    tempRect.origin.y=y+(height+margin)*(currentIndex/3);
+
+//    UIView *sourceView = self.sourceImagesContainerView.subviews[currentIndex];
+//    UIView* sourceView=[self.imageArray objectAtIndex:currentIndex];
+    UIView* sourceView=[[UIView alloc]initWithFrame:tempRect];
+    
+    
+
     CGRect targetTemp = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
     
     UIImageView *tempView = [[UIImageView alloc] init];
@@ -230,8 +248,10 @@
     
     
    // UIView *sourceView = self.sourceImagesContainerView.subviews[self.currentImageIndex];
-    UIView * sourceView=[self.imageArray objectAtIndex:self.currentImageIndex];
-   // NSLog(@"recognizer:%@",NSStringFromCGRect(sourceView.frame));
+    //UIView * sourceView=[self.imageArray objectAtIndex:self.currentImageIndex];
+    UIView* sourceView=self.tapedImageView;
+    NSLog(@"recognizer:%@",NSStringFromCGRect(sourceView.frame));
+    
 
     CGRect rect = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
     

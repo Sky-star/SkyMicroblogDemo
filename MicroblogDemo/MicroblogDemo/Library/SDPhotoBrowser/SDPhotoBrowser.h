@@ -31,6 +31,13 @@
 @property (nonatomic, assign) NSInteger imageCount;
 @property (nonatomic, strong) NSArray* imageArray;
 
+/*!
+ *  @author Sky
+ *
+ *  @brief  点击图片的frame
+ */
+@property (nonatomic, strong) UIView*  tapedImageView;
+
 @property (nonatomic, weak) id<SDPhotoBrowserDelegate> delegate;
 
 - (void)show;

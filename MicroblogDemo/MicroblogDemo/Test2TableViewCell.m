@@ -169,11 +169,13 @@ alpha:1.0]
 
 -(void)imgViewTapped:(UITapGestureRecognizer*) tapGestureRecognizer
 {
+   // NSLog(@"tap frame:%@",NSStringFromCGRect(tapGestureRecognizer.view.frame));
     SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
     browser.sourceImagesContainerView = self.contentView; // 原图的父控件
     browser.imageCount = self.imageViewArray.count; // 图片总数
     browser.currentImageIndex = (int)tapGestureRecognizer.view.tag;
     browser.imageArray=self.imageViewArray;
+    browser.tapedImageView=tapGestureRecognizer.view;
     browser.delegate = self;
     [browser show];
 
