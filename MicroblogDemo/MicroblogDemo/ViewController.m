@@ -125,7 +125,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
                 break;
                 
             default:
-                typeStr=@"无点击";
+                typeStr=@"点击错误";
                 break;
         }
         
