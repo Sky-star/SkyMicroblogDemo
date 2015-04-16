@@ -5,14 +5,21 @@
 
 欢迎大家提出宝贵的意见,谢谢。
 
-用到的第三方库:
-1.IQKeyboardManager(暂未用到)
-2.MKNetworkKit (暂未用到)
-3.SDWebImage
-4.SVProgressHUD
-5.SDPhotoBrowser
+###用到的第三方库:
 
-问题:
+1.[IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager)
+
+2.[MKNetworkKit](https://github.com/MugunthKumar/MKNetworkKit)
+
+3.[SDWebImage](https://github.com/rs/SDWebImage)
+
+4.[SVProgressHUD](https://github.com/TransitApp/SVProgressHUD)
+
+5.[SDPhotoBrowser](https://github.com/gsdios/SDPhotoBrowser)
+
+6.KZRickLabel(地址找不到了,不好意思)
+
+###问题:
 
 1.由于刚刚在学习自动布局不久，所以在程序Debug下运行会有很多关于约束的警告。但是具体想要的效果还是实现了。
 我会在将来继续修改同时也欢迎帮忙指正错误。
@@ -21,14 +28,22 @@
 
 3.之前我写过一个类似的项目，但是是用frame计算每张图片的位置，通过一系列计算得到cell的高度，但是滑动起来会非常卡。现在利用约束来让系统自动计算高度流畅了许多，但是我在模拟器上运行还是会有一些卡。希望大神赐教。
 
+4.在这次的功能上添加了文字和表情的图文混排以及网络链接，电话号码，话题内容，标签内容和用户的识别.再KZRickLabel的基础上添加了话题内容的正则匹配(e.g:#我的微博#)以及表情从plist文件中获取的修改.
 
-关于这个Demo以后的想法:
+
+###关于这个Demo以后的想法:
 
 1.手势点击图片位置问题已经修复.
 
-2.现在的文字限制只是普通的文字显示,并不包括一些表情,网络连接等。未来会逐步添加的。
+2.表情和网络链接等匹配已经添加上。一些效果上的优化会在后期逐步添加的。
 
 3.现在并未对一些模型和方法进行封装随着功能的添加会逐步进行封装方便大家使用。
 
+4.现在的Demo在显示上已经有了初步的样子，关于链接的点击的提示框等我会封装出一个自定义UIActoinSheet和UIAlertView方便修改样式和动画等。
+
+5.我不是很想将这个Demo做成一个App，只是想将日常在项目的编写中用到的做一个整理，再一个项目中用到的类似的页面写出来，方便大家拆开拿去用
+。
+
+6.现在有了展示页面，这个展示的页面我应该会写到一些提示框的出现，进一步的逻辑就不在写了。然后会着手写一个微博的发布页面。^_^
 
 

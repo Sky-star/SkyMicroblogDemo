@@ -250,7 +250,7 @@
    // UIView *sourceView = self.sourceImagesContainerView.subviews[self.currentImageIndex];
     //UIView * sourceView=[self.imageArray objectAtIndex:self.currentImageIndex];
     UIView* sourceView=self.tapedImageView;
-    NSLog(@"recognizer:%@",NSStringFromCGRect(sourceView.frame));
+    //NSLog(@"recognizer:%@",NSStringFromCGRect(sourceView.frame));
     
 
     CGRect rect = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];

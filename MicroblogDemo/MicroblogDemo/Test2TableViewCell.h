@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SkyLinkLabel.h"
 
 @interface Test2TableViewCell : UITableViewCell
 
@@ -32,7 +33,7 @@
 /**
  *  自适应label
  */
-@property(nonatomic,strong)UILabel* bodyLabel;
+@property(nonatomic,strong)SkyLinkLabel* bodyLabel;
 
 
 -(void)setImageswithURLs:(NSArray*) urls;

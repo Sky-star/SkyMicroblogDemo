@@ -46,12 +46,13 @@ static NSString *CellIdentifier = @"CellIdentifier";
     [self.testTableView registerClass:[Test2TableViewCell class] forCellReuseIdentifier:CellIdentifier];
     
     
+    
     // self.testTableView.estimatedRowHeight = UITableViewAutomaticDimension;
     
     self.testTableView.allowsSelection = NO;
     
     self.tableData = @[
-                       @" 中国网3月26日讯 据外媒报道，当地时间3月25日，法国总统奥朗德，德国总理默克尔、西班牙首相拉霍伊共同抵达德国之翼航空公司客机的失事地点。报道称，三位国家领导人抵达当地以后，与参加搜救的工作人员在临时指挥中心进行了会面。此外，法、德、西三国领导人在客机坠毁地点附近对在此次空难中的遇难者表示哀悼，并对参与搜救的消防队员表示了感谢。",
+                       @"@奔跑吧兄弟 : #跑男图腾# @邓超 [正义图腾]让我们都在一起！ #奔跑吧兄弟# [偷笑][偷笑] #哈哈",
                        @"大量的文物流失，频频的文物破坏已成为中国文物保护工作的常年之痛。中国文物保护立法已经30多年，今天，除了相关部门对文物保护的漠视和不作为，我们剩下的只有那些越来越少的沉默的文物。",
                        @"当地时间2015年3月25日，乌克兰基辅，在记者、摄影师及一众高官的注视之下，乌克兰警方冲入一场电视转播的内阁会议现场，逮捕乌克兰紧急服务部部长Serhiy Bochkovsky及其副手Vasyl Stoyetsky，两人均被控“高层次”腐败。据乌克兰内政部长表示，被捕的两人涉嫌多付给包括俄罗斯石油巨头卢克石油公司在内的多家公司采购费用。",
                        @"四川峨眉山景区降近7年来最大雪\uE415\uE415\uE415\uE415",
@@ -90,7 +91,57 @@ static NSString *CellIdentifier = @"CellIdentifier";
     
     cell.userNameLabel.text=@"真相只有一个";
     cell.timeLabel.text=@"1个小时前";
-    cell.bodyLabel.text = [self.tableData objectAtIndex:indexPath.row];
+    /*!
+     *  @author Sky
+     *
+     *  @brief  由于用到了图文混排所以这个里文字需要传入attributedText
+     */
+    cell.bodyLabel.attributedText = [NSAttributedString emotionAttributedStringFrom:[self.tableData objectAtIndex:indexPath.row] attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12]}];
+    
+    /*!
+     *  @author Sky
+     *
+     *  @brief  一个点击的回调就不多写了具体的逻辑大家可以按需求添加
+     */
+    cell.bodyLabel.linkTapHandler=^(SkyLinkType linkType, NSString *string, NSRange range) {
+        
+        NSString* typeStr=nil;
+        switch (linkType)
+        {
+            case SkyLinkTypeURL:
+                typeStr=@"网页链接";
+                break;
+            case SkyLinkTypeTheme:
+                typeStr=@"话题内容";
+                break;
+            case SkyLinkTypeHashTag:
+                typeStr=@"内容标签";
+                break;
+            case SkyLinkTypePhoneNumber:
+                typeStr=@"电话号码";
+                break;
+            case SkyLinkTypeUserHandle:
+                typeStr=@"用户";
+                break;
+                
+            default:
+                typeStr=@"无点击";
+                break;
+        }
+        
+        NSString* tapStr=[NSString stringWithFormat:@"点击了%@",string];
+        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:typeStr message:tapStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+        [alert show];
+
+    };
+    cell.bodyLabel.linkLongPressHandler = ^(SkyLinkType linkType, NSString *string, NSRange range){
+        //just like linkTapHandler
+        NSLog(@"长按");
+    };
+
+    
     cell.headImageView.image=[UIImage imageNamed:@"headImg_4"];
     
     
@@ -141,7 +192,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
     //cell.titleLabel.text =  [dataSourceItem valueForKey:@"title"];
     cell.userNameLabel.text=@"真相只有一个";
     cell.timeLabel.text=@"1个小时前";
-    cell.bodyLabel.text = [self.tableData objectAtIndex:indexPath.row];
+    cell.bodyLabel.attributedText = [NSAttributedString emotionAttributedStringFrom:[self.tableData objectAtIndex:indexPath.row] attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12]}];
     cell.headImageView.image=[UIImage imageNamed:@"headImg_4"];
     
     /**

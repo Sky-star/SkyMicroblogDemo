@@ -10,6 +10,8 @@
 		330747051ACBCF4B006E2D9F /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 330746FF1ACBCF4B006E2D9F /* SDBrowserImageView.m */; };
 		330747061ACBCF4B006E2D9F /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 330747011ACBCF4B006E2D9F /* SDPhotoBrowser.m */; };
 		330747071ACBCF4B006E2D9F /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 330747041ACBCF4B006E2D9F /* SDWaitingView.m */; };
+		33138C661ADE5BD2007F3D6F /* SkyLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33138C651ADE5BD2007F3D6F /* SkyLinkLabel.m */; };
+		33138C691ADE6172007F3D6F /* NSAttributedString+Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 33138C681ADE6172007F3D6F /* NSAttributedString+Emotion.m */; };
 		3355F4201AC3ADC8007B7AF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F41F1AC3ADC8007B7AF3 /* main.m */; };
 		3355F4231AC3ADC8007B7AF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4221AC3ADC8007B7AF3 /* AppDelegate.m */; };
 		3355F4261AC3ADC8007B7AF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4251AC3ADC8007B7AF3 /* ViewController.m */; };
@@ -18,7 +20,8 @@
 		3355F42E1AC3ADC8007B7AF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3355F42C1AC3ADC8007B7AF3 /* LaunchScreen.xib */; };
 		3355F43A1AC3ADC8007B7AF3 /* MicroblogDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4391AC3ADC8007B7AF3 /* MicroblogDemoTests.m */; };
 		3355F4851AC3FCA4007B7AF3 /* Test2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4841AC3FCA4007B7AF3 /* Test2TableViewCell.m */; };
-		3355F4891AC3FD2C007B7AF3 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4881AC3FD2C007B7AF3 /* UIView+AutoLayout.m */; };
+		33C3CFFD1ADE4D9000D8FDCA /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3CFFC1ADE4D9000D8FDCA /* UIView+AutoLayout.m */; };
+		33C3D0071ADE515800D8FDCA /* expression.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33C3D0061ADE515800D8FDCA /* expression.plist */; };
 		8AFABF300C7192F86503D2B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8ACB9918B629F8064625A1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,10 @@
 		330747021ACBCF4B006E2D9F /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
 		330747031ACBCF4B006E2D9F /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
 		330747041ACBCF4B006E2D9F /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
+		33138C641ADE5BD2007F3D6F /* SkyLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyLinkLabel.h; sourceTree = "<group>"; };
+		33138C651ADE5BD2007F3D6F /* SkyLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyLinkLabel.m; sourceTree = "<group>"; };
+		33138C671ADE6172007F3D6F /* NSAttributedString+Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Emotion.h"; sourceTree = "<group>"; };
+		33138C681ADE6172007F3D6F /* NSAttributedString+Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Emotion.m"; sourceTree = "<group>"; };
 		3355F41A1AC3ADC8007B7AF3 /* MicroblogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroblogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3355F41E1AC3ADC8007B7AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3355F41F1AC3ADC8007B7AF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,8 +63,9 @@
 		3355F4391AC3ADC8007B7AF3 /* MicroblogDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MicroblogDemoTests.m; sourceTree = "<group>"; };
 		3355F4831AC3FCA4007B7AF3 /* Test2TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2TableViewCell.h; sourceTree = "<group>"; };
 		3355F4841AC3FCA4007B7AF3 /* Test2TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2TableViewCell.m; sourceTree = "<group>"; };
-		3355F4871AC3FD2C007B7AF3 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
-		3355F4881AC3FD2C007B7AF3 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		33C3CFFB1ADE4D9000D8FDCA /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		33C3CFFC1ADE4D9000D8FDCA /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		33C3D0061ADE515800D8FDCA /* expression.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = expression.plist; sourceTree = "<group>"; };
 		7F8ACB9918B629F8064625A1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6766CEE323D60D42EC637F9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +92,8 @@
 		330746FC1ACBCF3E006E2D9F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				33C3CFFA1ADE4D9000D8FDCA /* Source */,
+				33C3CFF91ADE4B0F00D8FDCA /* SkyLabel */,
 				330746FD1ACBCF4B006E2D9F /* SDPhotoBrowser */,
 			);
 			path = Library;
@@ -126,8 +136,8 @@
 		3355F41C1AC3ADC8007B7AF3 /* MicroblogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				33C3D0051ADE509700D8FDCA /* Resource */,
 				330746FC1ACBCF3E006E2D9F /* Library */,
-				3355F4861AC3FD2C007B7AF3 /* Source */,
 				3355F4211AC3ADC8007B7AF3 /* AppDelegate.h */,
 				3355F4221AC3ADC8007B7AF3 /* AppDelegate.m */,
 				3355F4241AC3ADC8007B7AF3 /* ViewController.h */,
@@ -168,13 +178,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3355F4861AC3FD2C007B7AF3 /* Source */ = {
+		33C3CFF91ADE4B0F00D8FDCA /* SkyLabel */ = {
 			isa = PBXGroup;
 			children = (
-				3355F4871AC3FD2C007B7AF3 /* UIView+AutoLayout.h */,
-				3355F4881AC3FD2C007B7AF3 /* UIView+AutoLayout.m */,
+				33138C641ADE5BD2007F3D6F /* SkyLinkLabel.h */,
+				33138C651ADE5BD2007F3D6F /* SkyLinkLabel.m */,
+				33138C671ADE6172007F3D6F /* NSAttributedString+Emotion.h */,
+				33138C681ADE6172007F3D6F /* NSAttributedString+Emotion.m */,
+			);
+			path = SkyLabel;
+			sourceTree = "<group>";
+		};
+		33C3CFFA1ADE4D9000D8FDCA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				33C3CFFB1ADE4D9000D8FDCA /* UIView+AutoLayout.h */,
+				33C3CFFC1ADE4D9000D8FDCA /* UIView+AutoLayout.m */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		33C3D0051ADE509700D8FDCA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				33C3D0061ADE515800D8FDCA /* expression.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		687DB9517618A387BF4F9ED0 /* Frameworks */ = {
@@ -278,6 +307,7 @@
 			files = (
 				3355F4291AC3ADC8007B7AF3 /* Main.storyboard in Resources */,
 				3355F42E1AC3ADC8007B7AF3 /* LaunchScreen.xib in Resources */,
+				33C3D0071ADE515800D8FDCA /* expression.plist in Resources */,
 				3355F42B1AC3ADC8007B7AF3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,13 +360,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				330747051ACBCF4B006E2D9F /* SDBrowserImageView.m in Sources */,
-				3355F4891AC3FD2C007B7AF3 /* UIView+AutoLayout.m in Sources */,
+				33C3CFFD1ADE4D9000D8FDCA /* UIView+AutoLayout.m in Sources */,
 				330747061ACBCF4B006E2D9F /* SDPhotoBrowser.m in Sources */,
 				3355F4851AC3FCA4007B7AF3 /* Test2TableViewCell.m in Sources */,
 				3355F4261AC3ADC8007B7AF3 /* ViewController.m in Sources */,
 				3355F4231AC3ADC8007B7AF3 /* AppDelegate.m in Sources */,
 				3355F4201AC3ADC8007B7AF3 /* main.m in Sources */,
 				330747071ACBCF4B006E2D9F /* SDWaitingView.m in Sources */,
+				33138C661ADE5BD2007F3D6F /* SkyLinkLabel.m in Sources */,
+				33138C691ADE6172007F3D6F /* NSAttributedString+Emotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

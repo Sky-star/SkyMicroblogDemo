@@ -8,8 +8,10 @@
 
 #import "Test2TableViewCell.h"
 #import "UIView+AutoLayout.h"
-#import "SDPhotoBrowser.h"
 #import <UIImageView+WebCache.h>
+
+//图片浏览类库
+#import "SDPhotoBrowser.h"
 
 
 
@@ -326,14 +328,14 @@ alpha:1.0]
     return _headImageView;
 }
 
--(UILabel *)bodyLabel
+-(SkyLinkLabel *)bodyLabel
 {
     if (!_bodyLabel)
     {
-        _bodyLabel=[[UILabel alloc]initForAutoLayout];
+        _bodyLabel=[[SkyLinkLabel alloc]initForAutoLayout];
        // _bodyLabel.backgroundColor=[UIColor blueColor];
         _bodyLabel.textColor=[UIColor blackColor];
-        _bodyLabel.font=[UIFont fontWithName:@"Helvetica Neue" size:12];
+        _bodyLabel.font=[UIFont fontWithName:@"Avenir-Light" size:12];
         //以下几个属性必须设置
         _bodyLabel.numberOfLines=0;
         _bodyLabel.textAlignment=NSTextAlignmentLeft;
