@@ -155,7 +155,8 @@ alpha:1.0]
         imgV.tag=idx;
         [imgV addGestureRecognizer:[self addTapGestureRecognizer]];
         
-        [imgV sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"headImg_9"] options:SDWebImageProgressiveDownload];
+        [imgV setImage:[UIImage imageNamed:url]];
+        //[imgV sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"headImg_9"] options:SDWebImageProgressiveDownload];
         
         [self.imageViewArray addObject:imgV];
     }];
@@ -333,7 +334,6 @@ alpha:1.0]
     if (!_bodyLabel)
     {
         _bodyLabel=[[SkyLinkLabel alloc]initForAutoLayout];
-       // _bodyLabel.backgroundColor=[UIColor blueColor];
         _bodyLabel.textColor=[UIColor blackColor];
         _bodyLabel.font=[UIFont fontWithName:@"Avenir-Light" size:12];
         //以下几个属性必须设置

@@ -649,7 +649,7 @@
 }
 
 #pragma mark - Interactions
-- (IBAction)longPressLabel:(UILongPressGestureRecognizer *)recognizer
+- (void)longPressLabel:(UILongPressGestureRecognizer *)recognizer
 {
     if ((recognizer.view != self) || (recognizer.state != UIGestureRecognizerStateBegan)) {
         return;

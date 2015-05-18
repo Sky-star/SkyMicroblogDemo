@@ -12,6 +12,8 @@
 		330747071ACBCF4B006E2D9F /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 330747041ACBCF4B006E2D9F /* SDWaitingView.m */; };
 		33138C661ADE5BD2007F3D6F /* SkyLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33138C651ADE5BD2007F3D6F /* SkyLinkLabel.m */; };
 		33138C691ADE6172007F3D6F /* NSAttributedString+Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 33138C681ADE6172007F3D6F /* NSAttributedString+Emotion.m */; };
+		33145A491AE09C72000794C7 /* SkyActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 33145A481AE09C72000794C7 /* SkyActionSheet.m */; };
+		33145A4C1AE0A3EE000794C7 /* SkyActionSheetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33145A4B1AE0A3EE000794C7 /* SkyActionSheetButton.m */; };
 		3355F4201AC3ADC8007B7AF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F41F1AC3ADC8007B7AF3 /* main.m */; };
 		3355F4231AC3ADC8007B7AF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4221AC3ADC8007B7AF3 /* AppDelegate.m */; };
 		3355F4261AC3ADC8007B7AF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4251AC3ADC8007B7AF3 /* ViewController.m */; };
@@ -48,6 +50,10 @@
 		33138C651ADE5BD2007F3D6F /* SkyLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyLinkLabel.m; sourceTree = "<group>"; };
 		33138C671ADE6172007F3D6F /* NSAttributedString+Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Emotion.h"; sourceTree = "<group>"; };
 		33138C681ADE6172007F3D6F /* NSAttributedString+Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Emotion.m"; sourceTree = "<group>"; };
+		33145A471AE09C72000794C7 /* SkyActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyActionSheet.h; sourceTree = "<group>"; };
+		33145A481AE09C72000794C7 /* SkyActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyActionSheet.m; sourceTree = "<group>"; };
+		33145A4A1AE0A3EE000794C7 /* SkyActionSheetButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyActionSheetButton.h; sourceTree = "<group>"; };
+		33145A4B1AE0A3EE000794C7 /* SkyActionSheetButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyActionSheetButton.m; sourceTree = "<group>"; };
 		3355F41A1AC3ADC8007B7AF3 /* MicroblogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroblogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3355F41E1AC3ADC8007B7AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3355F41F1AC3ADC8007B7AF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 		330746FC1ACBCF3E006E2D9F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				33145A461AE09C5F000794C7 /* SkyActionSheet */,
 				33C3CFFA1ADE4D9000D8FDCA /* Source */,
 				33C3CFF91ADE4B0F00D8FDCA /* SkyLabel */,
 				330746FD1ACBCF4B006E2D9F /* SDPhotoBrowser */,
@@ -111,6 +118,17 @@
 				330747041ACBCF4B006E2D9F /* SDWaitingView.m */,
 			);
 			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		33145A461AE09C5F000794C7 /* SkyActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				33145A471AE09C72000794C7 /* SkyActionSheet.h */,
+				33145A481AE09C72000794C7 /* SkyActionSheet.m */,
+				33145A4A1AE0A3EE000794C7 /* SkyActionSheetButton.h */,
+				33145A4B1AE0A3EE000794C7 /* SkyActionSheetButton.m */,
+			);
+			path = SkyActionSheet;
 			sourceTree = "<group>";
 		};
 		3355F4111AC3ADC8007B7AF3 = {
@@ -362,11 +380,13 @@
 				330747051ACBCF4B006E2D9F /* SDBrowserImageView.m in Sources */,
 				33C3CFFD1ADE4D9000D8FDCA /* UIView+AutoLayout.m in Sources */,
 				330747061ACBCF4B006E2D9F /* SDPhotoBrowser.m in Sources */,
+				33145A4C1AE0A3EE000794C7 /* SkyActionSheetButton.m in Sources */,
 				3355F4851AC3FCA4007B7AF3 /* Test2TableViewCell.m in Sources */,
 				3355F4261AC3ADC8007B7AF3 /* ViewController.m in Sources */,
 				3355F4231AC3ADC8007B7AF3 /* AppDelegate.m in Sources */,
 				3355F4201AC3ADC8007B7AF3 /* main.m in Sources */,
 				330747071ACBCF4B006E2D9F /* SDWaitingView.m in Sources */,
+				33145A491AE09C72000794C7 /* SkyActionSheet.m in Sources */,
 				33138C661ADE5BD2007F3D6F /* SkyLinkLabel.m in Sources */,
 				33138C691ADE6172007F3D6F /* NSAttributedString+Emotion.m in Sources */,
 			);
