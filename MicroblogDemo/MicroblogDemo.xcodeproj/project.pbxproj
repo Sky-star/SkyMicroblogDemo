@@ -24,7 +24,7 @@
 		3355F4851AC3FCA4007B7AF3 /* Test2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355F4841AC3FCA4007B7AF3 /* Test2TableViewCell.m */; };
 		33C3CFFD1ADE4D9000D8FDCA /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3CFFC1ADE4D9000D8FDCA /* UIView+AutoLayout.m */; };
 		33C3D0071ADE515800D8FDCA /* expression.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33C3D0061ADE515800D8FDCA /* expression.plist */; };
-		8AFABF300C7192F86503D2B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8ACB9918B629F8064625A1 /* libPods.a */; };
+		9120A85998B96E62F504E2B4 /* libPods-MicroblogDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0260BB66B776929E44B95E /* libPods-MicroblogDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10C787B3EE93CB7035217C69 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		207249E7CF1D3E41C053AC95 /* Pods-MicroblogDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroblogDemo.release.xcconfig"; path = "Target Support Files/Pods-MicroblogDemo/Pods-MicroblogDemo.release.xcconfig"; sourceTree = "<group>"; };
 		330746FE1ACBCF4B006E2D9F /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
 		330746FF1ACBCF4B006E2D9F /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
 		330747001ACBCF4B006E2D9F /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		33C3CFFB1ADE4D9000D8FDCA /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
 		33C3CFFC1ADE4D9000D8FDCA /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 		33C3D0061ADE515800D8FDCA /* expression.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = expression.plist; sourceTree = "<group>"; };
-		7F8ACB9918B629F8064625A1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6766CEE323D60D42EC637F9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5D89170DB7906626D5C436EC /* Pods-MicroblogDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroblogDemo.debug.xcconfig"; path = "Target Support Files/Pods-MicroblogDemo/Pods-MicroblogDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5E0260BB66B776929E44B95E /* libPods-MicroblogDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MicroblogDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AFABF300C7192F86503D2B6 /* libPods.a in Frameworks */,
+				9120A85998B96E62F504E2B4 /* libPods-MicroblogDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00303432CEFE5B68F30FF92D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D89170DB7906626D5C436EC /* Pods-MicroblogDemo.debug.xcconfig */,
+				207249E7CF1D3E41C053AC95 /* Pods-MicroblogDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		09AF7D6CE850C03B71266142 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0260BB66B776929E44B95E /* libPods-MicroblogDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		330746FC1ACBCF3E006E2D9F /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +154,8 @@
 				3355F41C1AC3ADC8007B7AF3 /* MicroblogDemo */,
 				3355F4361AC3ADC8007B7AF3 /* MicroblogDemoTests */,
 				3355F41B1AC3ADC8007B7AF3 /* Products */,
-				BEB3C31FD2E8FD200684E67A /* Pods */,
-				687DB9517618A387BF4F9ED0 /* Frameworks */,
+				00303432CEFE5B68F30FF92D /* Pods */,
+				09AF7D6CE850C03B71266142 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,23 +241,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		687DB9517618A387BF4F9ED0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7F8ACB9918B629F8064625A1 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BEB3C31FD2E8FD200684E67A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				10C787B3EE93CB7035217C69 /* Pods.debug.xcconfig */,
-				D6766CEE323D60D42EC637F9 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,11 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3355F43D1AC3ADC8007B7AF3 /* Build configuration list for PBXNativeTarget "MicroblogDemo" */;
 			buildPhases = (
-				DA6A60122EDC2D0C61CEFB6F /* Check Pods Manifest.lock */,
+				EE78403B06ADBEDF34D48325 /* [CP] Check Pods Manifest.lock */,
 				3355F4161AC3ADC8007B7AF3 /* Sources */,
 				3355F4171AC3ADC8007B7AF3 /* Frameworks */,
 				3355F4181AC3ADC8007B7AF3 /* Resources */,
-				76FFD13D540579F7A02C47AF /* Copy Pods Resources */,
+				4AE4C3775E0365269B57D3CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,14 +287,17 @@
 		3355F4121AC3ADC8007B7AF3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Sky;
 				TargetAttributes = {
 					3355F4191AC3ADC8007B7AF3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = P8H3LMUM5P;
+						ProvisioningStyle = Automatic;
 					};
 					3355F4321AC3ADC8007B7AF3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = P8H3LMUM5P;
 						TestTargetID = 3355F4191AC3ADC8007B7AF3;
 					};
 				};
@@ -340,34 +343,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		76FFD13D540579F7A02C47AF /* Copy Pods Resources */ = {
+		4AE4C3775E0365269B57D3CC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Copy Pods Resources";
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MicroblogDemo/Pods-MicroblogDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MicroblogDemo/Pods-MicroblogDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DA6A60122EDC2D0C61CEFB6F /* Check Pods Manifest.lock */ = {
+		EE78403B06ADBEDF34D48325 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MicroblogDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -438,20 +457,34 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = P8H3LMUM5P;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -464,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -479,27 +512,40 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = P8H3LMUM5P;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -508,27 +554,37 @@
 		};
 		3355F43E1AC3ADC8007B7AF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10C787B3EE93CB7035217C69 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 5D89170DB7906626D5C436EC /* Pods-MicroblogDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: zhiguo cao (28K6LSAYQX)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8H3LMUM5P;
 				INFOPLIST_FILE = MicroblogDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.romaway.MicroblogDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7b70b31-3e3f-41c4-b3a5-f49f96693679";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		3355F43F1AC3ADC8007B7AF3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6766CEE323D60D42EC637F9 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 207249E7CF1D3E41C053AC95 /* Pods-MicroblogDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: zhiguo cao (28K6LSAYQX)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8H3LMUM5P;
 				INFOPLIST_FILE = MicroblogDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.romaway.MicroblogDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7b70b31-3e3f-41c4-b3a5-f49f96693679";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -536,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P8H3LMUM5P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -546,6 +603,7 @@
 				);
 				INFOPLIST_FILE = MicroblogDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youdro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MicroblogDemo.app/MicroblogDemo";
 			};
@@ -555,12 +613,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P8H3LMUM5P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MicroblogDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youdro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MicroblogDemo.app/MicroblogDemo";
 			};

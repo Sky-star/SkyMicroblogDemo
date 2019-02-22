@@ -1,5 +1,0 @@
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/IQKeyboardManager" "${PODS_ROOT}/Headers/Public/MKNetworkKit" "${PODS_ROOT}/Headers/Public/MKNetworkKit/Categories" "${PODS_ROOT}/Headers/Public/Reachability" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/SVProgressHUD"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/IQKeyboardManager" -isystem "${PODS_ROOT}/Headers/Public/MKNetworkKit" -isystem "${PODS_ROOT}/Headers/Public/MKNetworkKit/Categories" -isystem "${PODS_ROOT}/Headers/Public/Reachability" -isystem "${PODS_ROOT}/Headers/Public/SDWebImage" -isystem "${PODS_ROOT}/Headers/Public/SVProgressHUD"
-OTHER_LDFLAGS = -ObjC -l"Pods-IQKeyboardManager" -l"Pods-MKNetworkKit" -l"Pods-Reachability" -l"Pods-SDWebImage" -l"Pods-SVProgressHUD" -framework "CFNetwork" -framework "ImageIO" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
-PODS_ROOT = ${SRCROOT}/Pods

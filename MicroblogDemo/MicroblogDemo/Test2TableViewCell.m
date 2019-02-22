@@ -59,6 +59,7 @@ alpha:1.0]
 
 - (void)awakeFromNib {
     // Initialization code
+    [super awakeFromNib];
 }
 
 
@@ -103,7 +104,7 @@ alpha:1.0]
         
         
         [self.timeLabel autoPinEdge:ALEdgeTop  toEdge:ALEdgeBottom ofView:self.userNameLabel withOffset:10.f];
-        [self.timeLabel autoPinEdge:ALEdgeLeading toEdge:ALEdgeRight ofView:self.headImageView withOffset:15.f];
+        [self.timeLabel autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:self.headImageView withOffset:15.f];
         [self.timeLabel sizeToFit];
         
         

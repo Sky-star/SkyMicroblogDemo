@@ -4,21 +4,31 @@ PODS:
     - Reachability (~> 3.1.0)
   - Reachability (3.1.1)
   - SDWebImage (3.7.2):
-    - SDWebImage/Core
+    - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
   - SVProgressHUD (1.1.2)
 
 DEPENDENCIES:
-  - IQKeyboardManager (~> 3.2.0)
-  - MKNetworkKit (~> 0.87)
-  - SDWebImage (~> 3.7.1)
-  - SVProgressHUD (~> 1.0)
+  - IQKeyboardManager
+  - MKNetworkKit
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IQKeyboardManager
+    - MKNetworkKit
+    - Reachability
+    - SDWebImage
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 4adcd7cc9c17440a7cb74755f6f6c8389919c6bf
-  MKNetworkKit: 83e6296a8d42e98a71880424a889773654846d74
-  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
+  MKNetworkKit: 60ad3c83b62183e40ba75ce772c9427c25b520de
+  Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
-  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
+  SVProgressHUD: 3afb875b9eb23acd1bed9b82495695c68621a8b2
 
-COCOAPODS: 0.34.2
+PODFILE CHECKSUM: 38fafb5a40d54e8e9646e75e12662d39d68ae167
+
+COCOAPODS: 1.6.1
